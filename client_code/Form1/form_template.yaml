@@ -1,5 +1,26 @@
 components:
-- components: []
+- components:
+  - components:
+    - layout_properties: {full_width_row: false, grid_position: 'VSYRRQ,DBXQQN'}
+      name: label_1
+      properties: {align: left, bold: false, text: Feedback}
+      type: Label
+    - layout_properties: {grid_position: 'MKFIXA,VKGJRG'}
+      name: text_box_1
+      properties: {text: Name}
+      type: TextBox
+    - layout_properties: {grid_position: 'JLQHYA,XVLOCX'}
+      name: text_box_2
+      properties: {text: eMail}
+      type: TextBox
+    - layout_properties: {grid_position: 'CLPEEY,ROTKFN'}
+      name: text_area_1
+      properties: {text: Feedback}
+      type: TextArea
+    layout_properties: {grid_position: 'YRHRUF,CSNRVW'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}

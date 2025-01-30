@@ -3,20 +3,26 @@ components:
   - components:
     - layout_properties: {full_width_row: false, grid_position: 'VSYRRQ,DBXQQN'}
       name: label_1
-      properties: {align: left, bold: false, text: Feedback}
+      properties: {align: left, bold: false, text: KKC Feedback}
       type: Label
-    - layout_properties: {grid_position: 'MKFIXA,VKGJRG'}
-      name: text_box_1
-      properties: {text: Name}
+    - event_bindings: {pressed_enter: name_box_pressed_enter}
+      layout_properties: {grid_position: 'MKFIXA,VKGJRG'}
+      name: name_box
+      properties: {placeholder: Name, text: ''}
       type: TextBox
     - layout_properties: {grid_position: 'JLQHYA,XVLOCX'}
-      name: text_box_2
-      properties: {text: eMail}
+      name: email_box
+      properties: {placeholder: eMail, text: ''}
       type: TextBox
     - layout_properties: {grid_position: 'CLPEEY,ROTKFN'}
-      name: text_area_1
-      properties: {text: Feedback}
+      name: feedback_box
+      properties: {text: ''}
       type: TextArea
+    - event_bindings: {click: button_submit_click}
+      layout_properties: {grid_position: 'ZFJETT,LGACVO'}
+      name: button_submit
+      properties: {text: Submit}
+      type: Button
     layout_properties: {grid_position: 'YRHRUF,CSNRVW'}
     name: outlined_card_1
     properties: {role: outlined-card}
@@ -29,6 +35,10 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_heading
+  properties: {text: KKC Feedback Form}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
